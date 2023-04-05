@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body{
+  box-sizing: border-box;
+  height: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+}
+
+.wraper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.main-wraper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  height: 40px;
+  background-color: blue;
+}
+
+.main{
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: grey;
+  overflow: auto;
+}
+
+.map{
+  height: 100%;
+}
+
+table{
+  border-collapse: collapse;
+   border: 1px solid rgba(0, 0, 0, 0.288);
+   background-color: rgba(63, 62, 62, 0.342);
+   backdrop-filter: blur(4px);
+  font: bold;
+}
+
+td, tr, th{
+    border: 1px solid rgba(0, 0, 0, 0.288);
+
+  padding: 10px;
+}
+
+tr:nth-child(even){
+  background-color: rgba(202, 199, 199, 0.363);
+}
+
+th{
+  background-color: rgba(0, 0, 0, 0.575);
+  color: white;
+}
+
+form{
+  width: 500px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form > h1{
+  text-align: center;
+}
+
+input{
+  height: 30px;
+  width: 100%;
+}
+
+.input-wraper{
+  width: 100%;
+}
+
+.coordinate-wraper{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.link-wraper{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.link-wraper > a {
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: grey;
+}
+
+.login-button{
+  padding: 10px;
+  background-color: grey;
+  border-radius: 20px;
+}
