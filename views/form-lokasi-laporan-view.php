@@ -1,5 +1,13 @@
+<?php
+
+?>
+
 <form action="upload-lokasi-laporan.php" action='GET'>
-  <h1>Form Lokasi Laporan</h1>
+  <h1>Form Lokasi Kriminal</h1>
+  <div class='input-wraper'>
+    <label for="jenis_kejahatan">Jenis Kejahatan</label>
+    <input id='jenis_kejahatan' type="text" name='jenis_kejahatan'>
+  </div>
   <div class='input-wraper'>
     <label for="alamat">Alamat</label>
     <input id='alamat' type="text" name='alamat'>
@@ -15,8 +23,8 @@
   <div class='input-wraper'>
     <label for="koordinat">Koordinat</label>
     <div class='coordinate-wraper'>
-      <input id='latitude' placeholder='latitude' type="number" name='latitude'>
-      <input id='longitude' placeholder='longitude' type="number" name='longitude'>
+      <input id='latitude' value="<?=$_REQUEST['lat'] ?? null?>" step='0.0000000000000001' placeholder='latitude' type="number" name='latitude'>
+      <input id='longitude' value="<?=$_REQUEST['lng'] ?? null?>" step='0.0000000000000001' placeholder='longitude' type="number" name='longitude'>
     </div>
   </div>
   <button type='submit'>Submit</button>

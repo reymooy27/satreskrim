@@ -8,12 +8,10 @@
   $kategori = $_GET['kategori'];
   $keterangan = $_GET['keterangan'];
   $alamat = $_GET['alamat'];
-  $kelurahan = $_GET['kelurahan'];
-  $kecamatan = $_GET['kecamatan'];
 
   echo $terlapor;
 
-  $sql = "INSERT INTO laporan_masyarakat (terlapor, pelapor, kategori, keterangan, alamat, kelurahan, kecamatan) VALUES ('$terlapor', '$pelapor', '$kategori', '$keterangan', '$alamat', '$kelurahan', '$kecamatan')";
+  $sql = "INSERT INTO laporan_masyarakat (terlapor, pelapor, kategori, keterangan, alamat) VALUES ('$terlapor', '$pelapor', '$kategori', '$keterangan', '$alamat')";
 
   $success;
 

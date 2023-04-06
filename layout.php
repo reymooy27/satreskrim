@@ -31,22 +31,9 @@
 <body>
   <div class='container'>
     <div class='wraper'>
-      <div class='sidebar'>
-        <a href="dashboard.php">Beranda</a>
-        <a href="kelola-data-kriminal.php">Kelola Data Kriminal</a>
-        <a href="laporan-masyarakat.php">Laporan Masyarakat</a>
-        <?php if(isset($_SESSION['user-id'])):?>
-          <a href="logout.php">Logout</a>
-        <?php endif ?>
-      </div>
+      <?php include 'sidebar.php'?>
       <div class='main-wraper'>
-        <div class='header'>
-        <?php if(isset($_SESSION['user-id'])):?>
-            <h1><?= $user['username']?></h1>
-          <?php else:?>
-            <a class='login-button' href="login.php">Login</a>
-          <?php endif ?>
-        </div>
+        <?php include 'header.php'?>
         <div class='main'>
           <?php include($childview); ?>
         </div>

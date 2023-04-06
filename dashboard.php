@@ -3,6 +3,10 @@
   include 'db.php';
   $conn = OpenCon();
 
+  $query = "SELECT * FROM `lokasi_kriminal`";
+  $result = $conn->query($query);
+  $data = $result->fetch_all(MYSQLI_ASSOC);
+
   $user;
 
   if(isset($_SESSION['user-id'])){
@@ -29,49 +33,24 @@
 <body>
   <div class='container'>
     <div class='wraper'>
-      <div class='sidebar'>
-      <a href="dashboard.php">Beranda</a>
-        <a href="kelola-data-kriminal.php">Kelola Data Kriminal</a>
-        <a href="laporan-masyarakat.php">Laporan Masyarakat</a>
-        <?php if(isset($_SESSION['user-id'])):?>
-          <a href="logout.php">Logout</a>
-        <?php endif ?>
-      </div>
+      <?php include 'sidebar.php'?>
       <div class='main-wraper'>
-        <div class='header'>
-          <?php if(isset($_SESSION['user-id'])):?>
-            <h1><?= $user['username']?></h1>
-          <?php else:?>
-            <a class='login-button' href="login.php">Login</a>
-          <?php endif ?>
-        </div>
-        <div class='main'>
+        <?php include 'header.php'?>
+        <div class='main' style='padding: 0px;'>
           <div id='map' class='map'>
 
-          </div>
+            </div>
+            <div id='select-map' class='select-map'>Pilih titik di map</div>
+          <?php if(isset($_SESSION['user-id'])): ?>  
+            <button id='addButton' class='add-location' href=''>Tambah</button>
+          <?php endif ?>  
         </div>
       </div>
     </div>
   </div>
 </body>
 
-<script>
-  var map = L.map('map').setView([-9.546622, 124.8656249], 13);
-  map.on('click', (e)=>{
-    console.log(e)
-  })
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-const popup = L.popup()
-
-const marker = L.marker([-9.552366068532248, 124.85468223265403]).addTo(map);
-
-marker.on('click',(e)=>{
- marker
- .bindPopup()
- .setPopupContent('Yuhuhuh')
-})
-</script>
+<?php 
+  include 'map.php'
+?>
 </html>

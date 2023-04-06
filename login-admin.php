@@ -5,7 +5,7 @@
 
   if(isset($_POST['submit'])){
     $username = filter_var($_POST['username'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $password = filter_var($_POST['username'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $password = filter_var($_POST['password'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if(!$username){
       $_SESSION['signin'] = 'Username harus diisi';

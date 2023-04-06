@@ -43,19 +43,11 @@
             </div>
             <div class='input-wraper'>
               <label for="keterangan">Keterangan</label>
-              <input id='keterangan' type="text" name='keterangan'>
+              <textarea id='keterangan' type="text" name='keterangan'></textarea>
             </div>
             <div class='input-wraper'>
-              <label for="alamat">Alamat</label>
+              <label for="alamat">Alamat Lengkap</label>
               <input id='alamat' type="text" name='alamat'>
-            </div>
-            <div class='input-wraper'>
-              <label for="kelurahan">Kelurahan</label>
-              <input id='kelurahan' type="text" name='kelurahan'>
-            </div>
-            <div class='input-wraper'>
-              <label for="kecamatan">Kecamatan</label>
-              <input id='kecamatan' type="text" name='kecamatan'>
             </div>
             <button type='submit'>Submit</button>
           </form>

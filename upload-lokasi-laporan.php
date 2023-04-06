@@ -3,13 +3,14 @@
 
   $conn = OpenCon();
 
+  $jenis_kejahatan = $_GET['jenis_kejahatan'];
   $alamat = $_GET['alamat'];
   $kelurahan = $_GET['kelurahan'];
   $kecamatan = $_GET['kecamatan'];
   $latitude = $_GET['latitude'];
   $longitude = $_GET['longitude'];
 
-  $sql = "INSERT INTO lokasi_kriminal (alamat, kelurahan, kecamatan, latitude, longitude) VALUES ('$alamat', '$kelurahan', '$kecamatan', '$latitude', '$longitude')";
+  $sql = "INSERT INTO lokasi_kriminal (jenis_kejahatan, alamat, kelurahan, kecamatan, latitude, longitude) VALUES ('$jenis_kejahatan', '$alamat', '$kelurahan', '$kecamatan', '$latitude', '$longitude')";
 
   $success;
 

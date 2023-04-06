@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class='container'>
-    <div>
+    <div class='login-container'>
       <form action="login-admin.php" method='POST'>
         <?php if(isset($_SESSION['signin'])): ?>
           <h1>
@@ -24,7 +24,7 @@
         <label for="username">Username</label>
         <input type="text" name='username'>
         <label for="password">Password</label>
-        <input type="text" name='password'>
+        <input type="password" name='password'>
         <button type='submit' name='submit' >Login</button>
       </form>
     </div>

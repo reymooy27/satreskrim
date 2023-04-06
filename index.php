@@ -1,6 +1,13 @@
 <?php
   session_start();
+  include 'db.php';
+  $conn = OpenCon();
 
+
+  $query = "SELECT * FROM `lokasi_kriminal`";
+  $result = $conn->query($query);
+  $data = $result->fetch_all(MYSQLI_ASSOC);
+  $conn->close();
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +33,7 @@
         <div class='header'>
 
         </div>
-        <div class='main'>
+        <div class='main' style='padding: 0px;'>
           <div id='map' class='map'>
 
           </div>
@@ -36,23 +43,7 @@
   </div>
 </body>
 
-<script>
-  var map = L.map('map').setView([-9.546622, 124.8656249], 13);
-  map.on('click', (e)=>{
-    console.log(e)
-  })
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-const popup = L.popup()
-
-const marker = L.marker([-9.552366068532248, 124.85468223265403]).addTo(map);
-
-marker.on('click',(e)=>{
- marker
- .bindPopup()
- .setPopupContent('Yuhuhuh')
-})
-</script>
+<?php
+  include 'map.php'
+?>
 </html>
