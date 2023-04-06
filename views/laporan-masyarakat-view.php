@@ -39,7 +39,7 @@
           <a class='button edit'href="edit-laporan-masyarakat.php?id=<?= $row[0]?>">Edit</a>
         </td>
         <td>
-          <a class='button download'href="">Download</a>
+          <a class='button download'href="pdf.php">Download</a>
         </td>
       </tr>
     <?php endforeach;?>

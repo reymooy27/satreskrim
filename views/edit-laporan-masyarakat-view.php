@@ -15,23 +15,23 @@
     <h1>Form Laporan Masyarakat</h1>
     <div class='input-wraper'>
       <label for="terlapor">Terlapor</label>
-      <input id='terlapor' value="<?= $data['terlapor']?>" type="text" name='terlapor'>
+      <input id='terlapor' required value="<?= $data['terlapor']?>" type="text" name='terlapor'>
     </div>
     <div class='input-wraper'>
       <label for="pelapor">Pelapor</label>
-      <input id='pelapor' value="<?= $data['pelapor']?>" type="text" name='pelapor'>
+      <input id='pelapor' required value="<?= $data['pelapor']?>" type="text" name='pelapor'>
     </div>
     <div class='input-wraper'>
       <label for="kategori">Kategori</label>
-      <input id='kategori' value="<?= $data['kategori']?>" type="text" name='kategori'>
+      <input id='kategori' required value="<?= $data['kategori']?>" type="text" name='kategori'>
     </div>
     <div class='input-wraper'>
       <label for="keterangan">Keterangan</label>
-      <input id='keterangan' value="<?= $data['keterangan']?>" type="text" name='keterangan'>
+      <input id='keterangan' required value="<?= $data['keterangan']?>" type="text" name='keterangan'>
     </div>
     <div class='input-wraper'>
       <label for="alamat">Alamat Lengkap</label>
-      <input id='alamat' value="<?= $data['alamat']?>" type="text" name='alamat'>
+      <input id='alamat' required value="<?= $data['alamat']?>" type="text" name='alamat'>
     </div>
     <button type='submit' name='submit'>Submit</button>
   </form>

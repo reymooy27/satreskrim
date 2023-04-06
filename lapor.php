@@ -31,15 +31,15 @@
             <h1>Form Laporan Masyarakat</h1>
             <div class='input-wraper'>
               <label for="terlapor">Terlapor</label>
-              <input id='terlapor' type="text" name='terlapor'>
+              <input id='terlapor' required type="text" name='terlapor'>
             </div>
             <div class='input-wraper'>
               <label for="pelapor">Pelapor</label>
-              <input id='pelapor' type="text" name='pelapor'>
+              <input id='pelapor' required type="text" name='pelapor'>
             </div>
             <div class='input-wraper'>
               <label for="kategori">Kategori</label>
-              <input id='kategori' type="text" name='kategori'>
+              <input id='kategori' required type="text" name='kategori'>
             </div>
             <div class='input-wraper'>
               <label for="keterangan">Keterangan</label>
@@ -47,7 +47,7 @@
             </div>
             <div class='input-wraper'>
               <label for="alamat">Alamat Lengkap</label>
-              <input id='alamat' type="text" name='alamat'>
+              <input id='alamat' required type="text" name='alamat'>
             </div>
             <button type='submit'>Submit</button>
           </form>
