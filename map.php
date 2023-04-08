@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
   var locations = <?php echo json_encode($data); ?>;
   
   
-  
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
   }).addTo(map);
+
   
   
   for (var i = 0; i < locations.length; i++) {
@@ -68,4 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+const menu = document.getElementById('menu')
+  const sidebar = document.getElementsByClassName('sidebar')
+  menu.addEventListener('click',()=>{
+    sidebar[0].classList.toggle('open')
+  })
+  
+  const closeButton = document.getElementById('closeButton')
+  closeButton.addEventListener('click',()=>{
+    console.log('click')
+  })
 </script>

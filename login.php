@@ -22,9 +22,9 @@
           </h1>
         <?php endif ?>
         <label for="username">Username</label>
-        <input type="text" name='username'>
+        <input type="text" required name='username'>
         <label for="password">Password</label>
-        <input type="password" name='password'>
+        <input type="password" required name='password'>
         <button type='submit' name='submit' >Login</button>
       </form>
     </div>

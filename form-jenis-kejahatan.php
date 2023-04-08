@@ -4,8 +4,7 @@
     $childview = 'views/need-login.php';
     include('layout.php');
   }else{
-  $childview = 'views/edit-laporan-masyarakat-view.php';
+  $childview = 'views/form-jenis-kejahatan-view.php';
   include('layout.php');
   }
 ?>
-

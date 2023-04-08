@@ -1,6 +1,12 @@
 <?php
+include 'db.php';
   session_start();
+  $conn = OpenCon();
 
+  $querya = "SELECT * FROM jenis_kejahatan";
+  $resulta = $conn->query($querya);
+  $dataa = $resulta->fetch_all();
+  $conn->close();
 
 ?>
 <!DOCTYPE html>
@@ -24,9 +30,18 @@
       </div>
       <div class='main-wraper'>
         <div class='header'>
-
+        <div>
+          <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
+        </div>
         </div>
         <div class='main'>
+          <?php if(isset($_SESSION['laporan-success'])):
+            unset($_SESSION['laporan-success']);
+          ?>
+            <div class='success-alert'>
+              <span>Berhasil membuat laporan</span>
+            </div>
+          <?php endif; ?>
           <form action="upload-laporan-masyarakat.php" action='GET'>
             <h1>Form Laporan Masyarakat</h1>
             <div class='input-wraper'>
@@ -39,7 +54,11 @@
             </div>
             <div class='input-wraper'>
               <label for="kategori">Kategori</label>
-              <input id='kategori' required type="text" name='kategori'>
+              <select name="kategori" id="kategori">
+                <?php foreach($dataa as $row):?>
+                  <option value="<?= $row[1]?>"><?= $row[1]?></option>
+                <?php endforeach?>
+              </select>
             </div>
             <div class='input-wraper'>
               <label for="keterangan">Keterangan</label>
@@ -55,6 +74,13 @@
       </div>
     </div>
   </div>
+  <script>
+  const menu = document.getElementById('menu')
+  const sidebar = document.getElementsByClassName('sidebar')
+  menu.addEventListener('click',()=>{
+    sidebar[0].classList.toggle('open')
+  })
+</script>
 </body>
 
 </html>

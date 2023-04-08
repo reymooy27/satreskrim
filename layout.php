@@ -40,5 +40,17 @@
       </div>
     </div>
   </div>
+ <script>
+  const menu = document.getElementById('menu')
+  const sidebar = document.getElementsByClassName('sidebar')
+  menu.addEventListener('click',()=>{
+    sidebar[0].classList.toggle('open')
+  })
+  
+  const closeButton = document.getElementById('closeButton')
+  closeButton.addEventListener('click',()=>{
+    console.log('click')
+  })
+ </script>
 </body>
 </html>

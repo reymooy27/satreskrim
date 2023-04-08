@@ -24,7 +24,9 @@
       </div>
       <div class='main-wraper'>
         <div class='header'>
-
+          <div>
+            <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
+          </div>
         </div>
         <div class='main'>
           <h1>kontak</h1>
@@ -32,6 +34,13 @@
       </div>
     </div>
   </div>
+  <script>
+  const menu = document.getElementById('menu')
+  const sidebar = document.getElementsByClassName('sidebar')
+  menu.addEventListener('click',()=>{
+    sidebar[0].classList.toggle('open')
+  })
+</script>
 </body>
 
 </html>

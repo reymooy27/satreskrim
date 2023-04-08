@@ -12,6 +12,7 @@
 <div>
   <div class='link-wraper'>
     <a style='padding: 10px; background-color: var(--primary)' href="form-lokasi-laporan.php">Tambah Lokasi Kriminal</a>
+    <a style='padding: 10px; background-color: var(--primary)' href="kelola-jenis-kejahatan.php">Kelola Jenis Kejahatan</a>
   </div>
   <table>
     <tr>
@@ -21,8 +22,14 @@
       <th>Kelurahan</th>
       <th>Kecamatan</th>
       <th colspan='2'>Action</th>
-
     </tr>
+    <?php if(mysqli_num_rows($result) < 1):?>
+      <tr>
+        <td colspan='8'>
+          <h1 style='text-align: center;'>Tidak ada data</h1>
+        </td>
+      </tr>
+    <?php else: ?>
     <?php foreach($data as $key=>$row): ?>
       <tr>
         <td><?= $key + 1 ?></td>
@@ -38,5 +45,6 @@
         </td>
       </tr>
     <?php endforeach; ?>
+    <?php endif; ?>
   </table>
 </div>

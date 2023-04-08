@@ -8,6 +8,11 @@
       $result = $conn->query($query);
       $data = $result->fetch_assoc();
     }
+
+
+  $querya = "SELECT * FROM jenis_kejahatan";
+  $resulta = $conn->query($querya);
+  $dataa = $resulta->fetch_all();
   $conn->close();
 ?>
 
@@ -23,7 +28,11 @@
     </div>
     <div class='input-wraper'>
       <label for="kategori">Kategori</label>
-      <input id='kategori' required value="<?= $data['kategori']?>" type="text" name='kategori'>
+      <select name="kategori" id="kategori">
+      <?php foreach($dataa as $row):?>
+        <option value="<?= $row[1]?>" <?php if($data['kategori'] ==  $row[1]) { echo 'selected="selected"'; } ?>><?= $row[1]?></option>
+      <?php endforeach?>
+    </select>
     </div>
     <div class='input-wraper'>
       <label for="keterangan">Keterangan</label>

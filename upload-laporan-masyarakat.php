@@ -1,6 +1,6 @@
 <?php
   include 'db.php';
-
+  session_start();
   $conn = OpenCon();
 
   $terlapor = $_GET['terlapor'];
@@ -22,7 +22,8 @@
   }
 
   if($success){
-    header('Location: index.php');
+    $_SESSION['laporan-success'] = 'Berhasil';
+    header('Location: lapor.php');
     exit();
   }
 

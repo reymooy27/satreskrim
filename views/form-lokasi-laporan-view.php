@@ -1,4 +1,11 @@
 <?php
+  $conn = OpenCon();
+
+
+  $query = "SELECT * FROM `jenis_kejahatan`";
+  $result = $conn->query($query);
+  $data = $result->fetch_all();
+  $conn->close();
 
 ?>
 
@@ -6,7 +13,11 @@
   <h1>Form Lokasi Kriminal</h1>
   <div class='input-wraper'>
     <label for="jenis_kejahatan">Jenis Kejahatan</label>
-    <input id='jenis_kejahatan' required type="text" name='jenis_kejahatan'>
+    <select name="jenis_kejahatan" id="jenis_kejahatan">
+      <?php foreach($data as $row):?>
+        <option value="<?= $row[1]?>"><?= $row[1]?></option>
+      <?php endforeach?>
+    </select>
   </div>
   <div class='input-wraper'>
     <label for="alamat">Alamat</label>

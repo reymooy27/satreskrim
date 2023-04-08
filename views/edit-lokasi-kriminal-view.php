@@ -1,13 +1,19 @@
 <?php
   $conn = OpenCon();
       $id;
-    if(isset($_REQUEST['id'])){
-      $id = $_REQUEST['id'];
-      $query = "SELECT * FROM lokasi_kriminal WHERE id='$id'";
-      
-      $result = $conn->query($query);
-      $data = $result->fetch_assoc();
-    }
+  if(isset($_REQUEST['id'])){
+    $id = $_REQUEST['id'];
+    $query = "SELECT * FROM lokasi_kriminal WHERE id='$id'";
+    
+    $result = $conn->query($query);
+    $data = $result->fetch_assoc();
+  }
+
+
+  $querya = "SELECT * FROM jenis_kejahatan";
+  $resulta = $conn->query($querya);
+  $dataa = $resulta->fetch_all();
+
   $conn->close();
 ?>
 
@@ -16,7 +22,11 @@
   <h1>Form Lokasi Kriminal</h1>
   <div class='input-wraper'>
     <label for="jenis_kejahatan">Jenis Kejahatan</label>
-    <input id='jenis_kejahatan' value=<?= $data['jenis_kejahatan']?> type="text" name='jenis_kejahatan'>
+    <select name="jenis_kejahatan" value="<?= $data['jenis_kejahatan']?>" id="jenis_kejahatan">
+      <?php foreach($dataa as $row):?>
+        <option value="<?= $row[1]?>" <?php if($data['jenis_kejahatan'] ==  $row[1]) { echo 'selected="selected"'; } ?>><?= $row[1]?></option>
+      <?php endforeach?>
+    </select>
   </div>
   <div class='input-wraper'>
     <label for="alamat">Alamat</label>

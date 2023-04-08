@@ -1,9 +1,14 @@
 <div class='header'>
+  <div>
+    <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
+  </div>
   <?php if(isset($_SESSION['user-id'])):?>
-    <div class='avatar-container'>
-      <div class='avatar'></div>
+    <a href='user.php' class='avatar-container'>
+      <div class='avatar'>
+        <img src="./img/iconmonstr-user-19-240.png" alt="" style='width:100%'>
+      </div>
       <span><?= $user['username']?></span>
-    </div>
+    </a>
   <?php else:?>
     <a class='login-button' href="login.php">Login</a>
   <?php endif ?>

@@ -31,7 +31,9 @@
       </div>
       <div class='main-wraper'>
         <div class='header'>
-
+        <div>
+          <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
+        </div>
         </div>
         <div class='main' style='padding: 0px;'>
           <div id='map' class='map'>
@@ -41,6 +43,7 @@
       </div>
     </div>
   </div>
+ 
 </body>
 
 <?php
