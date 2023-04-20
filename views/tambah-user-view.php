@@ -15,7 +15,7 @@
       ?>
     </p>
   <?php endif ?>
-  <h1>Form Tambah User</h1>
+  <h1>Form Tambah Admin</h1>
   <div class='input-wraper'>
     <label for="username">Username</label>
     <input id='username' value="<?= $username ?>" required="true" type="text" name='username'>

@@ -1,6 +1,9 @@
 <div class='header'>
-  <div>
+  <!-- <div>
     <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
+  </div> -->
+  <div>
+    <img src="./img/logo.png" style="width: 30px;" alt="">
   </div>
   <?php if(isset($_SESSION['user-id'])):?>
     <a href='user.php' class='avatar-container'>

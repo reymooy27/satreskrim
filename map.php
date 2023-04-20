@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .setPopupContent(
       `<div style="padding: 5px; width: 300px;">
         <h1 style="font-size: 24px;">${locations[i].jenis_kejahatan}</h1>
-        <p>${locations[i].alamat}, ${locations[i].kelurahan}, ${locations[i].kecamatan}</p>
+        <p style="font-size: 18px;">${locations[i].alamat !== '' ? locations[i].alamat + ',' : ""} ${locations[i].kelurahan !== '' ?  locations[i].kelurahan + ',' : ""} Kecamatan ${locations[i].kecamatan}</p>
+        <span class='status-kasus'>Terselesaikan</span>
       </div>`
       );
   }

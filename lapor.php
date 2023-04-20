@@ -31,7 +31,7 @@ include 'db.php';
       <div class='main-wraper'>
         <div class='header'>
         <div>
-          <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
+          <img src="./img/logo.png" style="width: 30px;" alt="">
         </div>
         </div>
         <div class='main'>

@@ -9,7 +9,7 @@
   $conn->close();
 ?>
 <div class='link-wraper'>
-  <a style='padding: 10px; background-color: var(--primary)' href="tambah-user.php">Tambah user</a>
+  <a style='padding: 10px; background-color: var(--primary)' href="tambah-user.php">Tambah Admin</a>
 </div>
 <table>
   <tr>

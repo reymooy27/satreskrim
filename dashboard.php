@@ -38,8 +38,18 @@
         <?php include 'header.php'?>
         <div class='main' style='padding: 0px;'>
           <div id='map' class='map'>
-
+            <div>
+              <div>
+                <button id="btn" class="kasusBtn">Peta Administrasi</button>
+              </div>
+              <div id="petaAdministrasi" class="petaAdministrasi">
+                <button id="close">
+                  <img src="./img/iconmonstr-x-mark-lined-240.png" alt="">
+                </button>
+                <img src="./img/peta_malaka.jpg" alt="">
+              </div>
             </div>
+          </div>
             <div id='select-map' class='select-map'>Pilih titik di map</div>
           <?php if(isset($_SESSION['user-id'])): ?>  
             <button id='addButton' class='add-location' href=''>Tambah</button>
@@ -48,6 +58,21 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const btn = document.getElementById('btn')
+    const peta = document.getElementById('petaAdministrasi')
+    const map = document.getElementById('map')
+    const close = document.getElementById('close')
+
+    close.addEventListener('click', ()=>{
+      peta.classList.remove('view')
+      console.log('click')
+    })
+    btn.addEventListener('click', ()=>{
+      peta.classList.toggle('view')
+    })
+  </script>
 </body>
 
 <?php 

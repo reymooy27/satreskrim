@@ -21,11 +21,11 @@
   </div>
   <div class='input-wraper'>
     <label for="alamat">Alamat</label>
-    <input id='alamat' required type="text" name='alamat'>
+    <input id='alamat' type="text" name='alamat'>
   </div>
   <div class='input-wraper'>
     <label for="kelurahan">Kelurahan</label>
-    <input id='kelurahan' required type="text" name='kelurahan'>
+    <input id='kelurahan' type="text" name='kelurahan'>
   </div>
   <div class='input-wraper'>
     <label for="kecamatan">Kecamatan</label>

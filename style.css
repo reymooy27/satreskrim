@@ -292,7 +292,114 @@ label{
   padding: 20px;
   border-radius: 10px;
 }
+.kasus.view{
+  display: flex;
+}
 
+.kasus{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+  height: 300px;
+  z-index: 999999999;
+  top: 60px;
+  right: 20px;
+}
+.buttonGroup{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  right: 20px;
+}
+
+.buttonGroup > button{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.kasusBtn{
+  position: absolute;
+  background-color: white;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+
+.kasus-item{
+  height: 100px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.kasus-item > div > h2{
+  font-size: 30px;
+}
+.kasus-item > div{
+  text-align: center;
+}
+
+.status-kasus{
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  border-radius: 50px;
+  background-color: rgb(12, 217, 12);
+  text-align: center;
+}
+
+.petaAdministrasi.view{
+  display: flex;
+}
+.petaAdministrasi{
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  /* bottom: 0; */
+  right: 0;
+  margin: 40px auto 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 20px;
+  display: none;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+}
+
+.petaAdministrasi > img{
+  width: 80%;
+  height: 80%;
+}
+.petaAdministrasi > button > img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.petaAdministrasi > button{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  border: none;
+  outline: none;
+}
 
 @media only screen and (min-width: 600px) {
   .sidebar {
