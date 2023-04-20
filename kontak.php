@@ -32,8 +32,10 @@
           <h1 style="font-size: 30px">Kontak</h1>
           <div style="display: flex; flex-direction: column; gap: 10px;">
             <form action="email.php" method="POST" style="border: none; margin: 20px 0; padding: 0;">
+              <label for="nama">Nama</label>
+              <input type="text" name="nama" required>
               <label for="pesan">Pesan</label>
-              <textarea name="laporan" id="" cols="30" rows="10"></textarea>
+              <textarea name="laporan" id="" cols="30" rows="10" required></textarea>
               <button type="submit" name="submit">Submit</button>
               <?php if(isset($_SESSION['email-sent'])): unset($_SESSION['email-sent'])?>
                 <div style="background: #0cd90c;padding: 10px;border-radius: 10px;">Email berhasil terkirim</div>

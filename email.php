@@ -31,12 +31,12 @@ if(isset($_POST['laporan'])){
   
       //Recipients
       $mail->setFrom('laporanmasyarakatmalaka@gmail.com', "Laporan Masyarakat");
-      $mail->addAddress('reymooy27@gmail.com',);     //Add a recipient
+      $mail->addAddress('satreskrimmalaka07@gmail.com',);     //Add a recipient
     //Optional name
   
       //Content
       $mail->Subject = 'Laporan Masyarakat';
-      $mail->Body    = $_POST['laporan'];
+      $mail->Body    = 'Nama : ' . $_POST['nama'] . "\n" . 'Pesan : ' . $_POST['laporan'];
   
       $mail->send();
       $_SESSION['email-sent'] = 'Email berhasil terkirim';
