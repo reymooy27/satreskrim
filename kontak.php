@@ -19,6 +19,7 @@
     <div class='wraper'>
       <div class='sidebar'>
       <a href="index.php">Beranda</a>
+        <a href="berita.php">Berita</a>
         <a href="lapor.php">Lapor</a>
         <a href="kontak.php">Contact Us</a>
       </div>
@@ -27,6 +28,9 @@
           <div>
             <img src="./img/logo.png" style="width: 30px;" alt="">
           </div>
+          <div>
+          <a href="login.php" style="border-radius: 5px; padding: 10px; background-color: white;">Login</a>
+        </div>
         </div>
         <div class='main'>
           <h1 style="font-size: 30px">Kontak</h1>

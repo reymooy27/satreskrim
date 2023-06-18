@@ -2,6 +2,6 @@
   session_start();
   unset($_SESSION["user-id"]);
 
-  header('Location: dashboard.php');
+  header('Location: index.php');
   exit();
 ?>

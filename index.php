@@ -25,17 +25,19 @@
   <div class='container'>
     <div class='wraper'>
       <div class='sidebar'>
-      <a href="index.php">Beranda</a>
+        <a href="index.php">Beranda</a>
+        <a href="berita.php">Berita</a>
         <a href="lapor.php">Lapor</a>
         <a href="kontak.php">Contact Us</a>
       </div>
       <div class='main-wraper'>
         <div class='header'>
-        <!-- <div>
-          <img id='menu'src='./img./iconmonstr-menu-left-lined-240.png' style="width: 30px; height: 30px" />
-        </div> -->
-        <div>
+        <div style="display: flex; gap: 10px; align-items: center;">
           <img src="./img/logo.png" style="width: 30px;" alt="">
+          <h1>Satreskrim</h1>
+        </div>
+        <div>
+          <a href="login.php" style="border-radius: 5px; padding: 10px; background-color: white;">Login</a>
         </div>
         </div>
         <div class='main' style='padding: 0px;'>

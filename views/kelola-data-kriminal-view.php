@@ -12,7 +12,7 @@
 <div>
   <div class='link-wraper'>
     <a style='padding: 10px; background-color: var(--primary)' href="form-lokasi-laporan.php">Tambah Lokasi Kriminal</a>
-    <a style='padding: 10px; background-color: var(--primary)' href="kelola-jenis-kejahatan.php">Kelola Jenis Kejahatan</a>
+    <!-- <a style='padding: 10px; background-color: var(--primary)' href="kelola-jenis-kejahatan.php">Kelola Jenis Kejahatan</a> -->
   </div>
   <table>
     <tr>

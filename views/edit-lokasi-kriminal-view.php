@@ -22,23 +22,24 @@
   <h1>Form Lokasi Kriminal</h1>
   <div class='input-wraper'>
     <label for="jenis_kejahatan">Jenis Kejahatan</label>
-    <select name="jenis_kejahatan" value="<?= $data['jenis_kejahatan']?>" id="jenis_kejahatan">
+    <input type="text" name="jenis_kejahatan" value="<?= $data['jenis_kejahatan']?>">
+    <!-- <select name="jenis_kejahatan" value="<?= $data['jenis_kejahatan']?>" id="jenis_kejahatan">
       <?php foreach($dataa as $row):?>
         <option value="<?= $row[1]?>" <?php if($data['jenis_kejahatan'] ==  $row[1]) { echo 'selected="selected"'; } ?>><?= $row[1]?></option>
       <?php endforeach?>
-    </select>
+    </select> -->
   </div>
   <div class='input-wraper'>
     <label for="alamat">Alamat</label>
-    <input id='alamat' value=<?= $data['alamat']?> type="text" name='alamat'>
+    <input id='alamat' value="<?= $data['alamat']?>" type="text" name='alamat'>
   </div>
   <div class='input-wraper'>
     <label for="kelurahan">Kelurahan</label>
-    <input id='kelurahan' value=<?= $data['kelurahan']?> type="text" name='kelurahan'>
+    <input id='kelurahan' value="<?= $data['kelurahan']?>" type="text" name='kelurahan'>
   </div>
   <div class='input-wraper'>
     <label for="kecamatan">Kecamatan</label>
-    <input id='kecamatan' value=<?= $data['kecamatan']?> type="text" name='kecamatan'>
+    <input id='kecamatan' value="<?= $data['kecamatan']?>" type="text" name='kecamatan'>
   </div>
   <div class='input-wraper'>
     <label for="koordinat">Koordinat</label>

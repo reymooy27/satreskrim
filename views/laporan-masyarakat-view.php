@@ -11,12 +11,15 @@
 
   <table>
     <tr>
-      <th>No Laporan</th>
       <th>Terlapor</th>
       <th>Pelapor</th>
+      <th>Umur</th>
+      <th>Agama</th>
+      <th>Pekerjaan</th>
+      <th>No Telp</th>
       <th>Tanggal</th>
-      <th>Kategori</th>
-      <th>Keterangan</th>
+      <th>Tempat Kejadian</th>
+      <th>Tindak Pidana</th>
       <th>Alamat</th>
       <th colspan='3'>Action</th>
     </tr>
@@ -29,15 +32,18 @@
     <?php else: ?>
       <?php foreach($data as $row):?>
         <tr>
-          <td><?= $row[0]?> </td>
           <td><?= $row[2]?> </td>
           <td><?= $row[1]?> </td>
+          <td><?= $row[7]?> </td>
+          <td><?= $row[8]?> </td>
+          <td><?= $row[9]?> </td>
+          <td><?= $row[10]?> </td>
           <td><?php $timestamp = strtotime($row[6]);
                 $time = date('Y-m-d H:i', $timestamp);
                 echo $time;
           ?> </td>
+          <td><?= $row[11]?> </td>
           <td><?= $row[3]?> </td>
-          <td><?= $row[4]?> </td>
           <td><?= $row[5]?> </td>
           <td>
             <a class='button delete'href="hapus-laporan-masyarakat.php?id=<?= $row[0]?>">Hapus</a>

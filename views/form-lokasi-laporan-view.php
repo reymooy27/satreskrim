@@ -13,11 +13,12 @@
   <h1>Form Lokasi Kriminal</h1>
   <div class='input-wraper'>
     <label for="jenis_kejahatan">Jenis Kejahatan</label>
-    <select name="jenis_kejahatan" id="jenis_kejahatan">
+    <input type="text" name='jenis_kejahatan'>
+    <!-- <select id='selectKejahatan' name="jenis_kejahatan" id="jenis_kejahatan">
       <?php foreach($data as $row):?>
         <option value="<?= $row[1]?>"><?= $row[1]?></option>
       <?php endforeach?>
-    </select>
+    </select> -->
   </div>
   <div class='input-wraper'>
     <label for="alamat">Alamat</label>
@@ -40,3 +41,14 @@
   </div>
   <button type='submit'>Submit</button>
 </form>
+
+
+<script>
+  const sel = document.getElementById('selectKejahatan')
+  const arr = []
+  sel.addEventListener('change', (e)=>{
+    arr.push(e.target.options[e.target.selectedIndex].text)
+  })
+  let x = []
+  console.log(x)
+</script>
